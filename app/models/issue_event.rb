@@ -1,0 +1,2 @@
+class IssueEvent < ApplicationRecord
+end
