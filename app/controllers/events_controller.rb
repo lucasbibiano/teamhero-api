@@ -1,6 +1,6 @@
 class EventsController < ApplicationController
   def index
-    render status: 200, json: IssueEvent.all.to_json
+    render status: 200, json: (IssueEvent.all + PullRequestEvent.all).to_json
   end
 
   def create

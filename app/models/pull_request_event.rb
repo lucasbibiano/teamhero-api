@@ -1,0 +1,2 @@
+class PullRequestEvent < ApplicationRecord
+end
