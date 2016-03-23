@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  issue: 1
+  organization: MyString
+  repository: MyString
+  body: MyText
+  actor: MyString
+
+two:
+  issue: 1
+  organization: MyString
+  repository: MyString
+  body: MyText
+  actor: MyString

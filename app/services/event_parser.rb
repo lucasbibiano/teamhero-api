@@ -10,6 +10,8 @@ class EventParser
       Events::IssueEventParser.new.parse(@payload)
     elsif @event_type == 'pull_request'
       Events::PullRequestEventParser.new.parse(@payload)
+    elsif @event_type == 'issue_comment'
+      Events::CommentEventParser.new.parse(@payload)
     end
 
   end
