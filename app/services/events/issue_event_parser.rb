@@ -2,7 +2,7 @@ module Events
   class IssueEventParser
     def parse(payload)
       IssueEvent.create do |issue|
-        issue.action = payload.dig("action")
+        issue.action = payload.dig("event", "action")
         issue.name = payload.dig("issue", "title")
         issue.number = payload.dig("issue", "number").to_i
         issue.actor = payload.dig("sender", "login")
