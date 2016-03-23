@@ -1,0 +1,2 @@
+class WikiEvent < ApplicationRecord
+end

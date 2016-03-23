@@ -12,6 +12,8 @@ class EventParser
       Events::PullRequestEventParser.new.parse(@payload)
     elsif @event_type == 'issue_comment'
       Events::CommentEventParser.new.parse(@payload)
+    elsif @event_type == 'gollum'
+      Events::WikiEventParser.new.parse(@payload)
     end
 
   end

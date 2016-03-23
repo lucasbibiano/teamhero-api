@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160323003555) do
+ActiveRecord::Schema.define(version: 20160323005255) do
 
   create_table "comment_events", force: :cascade do |t|
     t.integer  "issue"
@@ -43,6 +43,15 @@ ActiveRecord::Schema.define(version: 20160323003555) do
     t.integer  "number"
     t.string   "from"
     t.string   "to"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+  end
+
+  create_table "wiki_events", force: :cascade do |t|
+    t.string   "organization"
+    t.string   "repository"
+    t.string   "actor"
+    t.text     "pages"
     t.datetime "created_at",   null: false
     t.datetime "updated_at",   null: false
   end
