@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  slack_bot_access_token: MyString
+  slack_bot_user_id: MyString
+  slack_team_id: MyString
+  slack_team_name: MyString
+  gh_organization: MyString
+
+two:
+  slack_bot_access_token: MyString
+  slack_bot_user_id: MyString
+  slack_team_id: MyString
+  slack_team_name: MyString
+  gh_organization: MyString

@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  channel_id: MyString
+  team_id: MyString
+  body: MyText
+  actor: MyString
+  shared_link: false
+
+two:
+  channel_id: MyString
+  team_id: MyString
+  body: MyText
+  actor: MyString
+  shared_link: false

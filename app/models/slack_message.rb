@@ -1,0 +1,2 @@
+class SlackMessage < ApplicationRecord
+end

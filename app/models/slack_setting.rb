@@ -1,0 +1,2 @@
+class SlackSetting < ApplicationRecord
+end

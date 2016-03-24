@@ -34,3 +34,13 @@ end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+
+gem 'rest-client'
+
+gem 'dotenv'
+
+gem 'slack-ruby-client', require: 'slack-ruby-client'
+gem 'eventmachine'
+gem 'faye-websocket'
+
+gem 'sidekiq'
