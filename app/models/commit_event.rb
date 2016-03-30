@@ -1,0 +1,2 @@
+class CommitEvent < ApplicationRecord
+end

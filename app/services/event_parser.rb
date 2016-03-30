@@ -14,8 +14,9 @@ class EventParser
       Events::CommentEventParser.new.parse(@payload)
     elsif @event_type == 'gollum'
       Events::WikiEventParser.new.parse(@payload)
+    elsif @event_type == 'push'
+      Events::PushEventParser.new.parse(@payload)
     end
-
   end
 
   def self.call(event_type, payload)
