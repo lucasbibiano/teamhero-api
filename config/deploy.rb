@@ -4,7 +4,7 @@ lock '3.4.0'
 server '104.236.11.46', user: 'deployer', roles: %w{web app}
 
 set :application,     'teamhero'
-set :repo_url,        'https://github.com/lucasbibiano/teamhero-api.git'
+set :repo_url,        'git@github.com:lucasbibiano/teamhero-api.git'
 set :user,            'deployer'
 set :puma_threads,    [4, 16]
 set :puma_workers,    0
