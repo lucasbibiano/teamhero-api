@@ -1,7 +1,7 @@
 lock '3.4.0'
 
 # Change these
-server '104.236.11.46', user: 'deployer', roles: %w{web app}
+server '104.236.11.46', user: 'deployer', roles: %w{web app db}
 
 set :application,     'teamhero'
 set :repo_url,        'git@github.com:lucasbibiano/teamhero-api.git'
