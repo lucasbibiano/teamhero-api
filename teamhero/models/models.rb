@@ -20,7 +20,7 @@ module Models
 
                        field :created_at, type: DateTime
 
-                       store_in collection: klass
+                       store_in collection: klass.underscore
                      end)
   end
 end
