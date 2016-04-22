@@ -1,2 +1,2 @@
-web: rackup -p 80
-worker: bundle exec sidekiq -r ./environment.rb
+web: bash -c 'rackup -p 80'
+worker: bash -c 'bundle exec sidekiq -r ./environment.rb'
