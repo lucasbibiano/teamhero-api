@@ -5,8 +5,8 @@ class GithubWorker
     gh_data = Services::GithubRepositoryReader.call(repository, token)
 
     gh_data.each do |key, value|
-      Object.const_get("Models::#{key}").destroy_all
-      Object.const_get("Models::#{key}").create(value)
+      "models/#{key}".classify.constantize.destroy_all
+      "models/#{key}".classify.constantize.create(value)
     end
   end
 end

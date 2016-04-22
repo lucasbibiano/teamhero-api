@@ -4,7 +4,7 @@ module Teamhero
 
     helpers do
       def get_model(str)
-        "models/#{str}".camelize.constantize
+        "models/#{key}".classify.constantize
       rescue NameError
         error! "Not found", 404
       end
