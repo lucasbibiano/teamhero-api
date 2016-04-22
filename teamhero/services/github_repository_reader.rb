@@ -22,31 +22,31 @@ module Services
     def get_issues
       @client.issues(@repository, state: "all").map do |entry|
         next nil if entry.pull_request
-        { author: entry.user.login, title: entry.title, repository: @repository }
+        { author: entry.user.login, title: entry.title, created_at: entry.created_at, repository: @repository }
       end.compact
     end
 
     def get_issues_comments
       @client.issues_comments(@repository).map do |entry|
-        { author: entry.user.login, body: entry.body, repository: @repository }
+        { author: entry.user.login, body: entry.body, created_at: entry.created_at, repository: @repository }
       end
     end
 
     def get_pull_requests
       @client.pull_requests(@repository, state: "all").map do |entry|
-        { author: entry.user.login, title: entry.title, merged_at: entry.merged_at, repository: @repository }
+        { author: entry.user.login, title: entry.title, merged_at: entry.merged_at, created_at: entry.created_at, repository: @repository }
       end
     end
 
     def get_pull_requests_comments
       @client.pull_requests_comments(@repository).map do |entry|
-        { author: entry.user.login, body: entry.body, repository: @repository }
+        { author: entry.user.login, body: entry.body, created_at: entry.created_at, repository: @repository }
       end
     end
 
     def get_commits_on_master
       @client.commits_since(@repository, '1970-10-01').map do |entry|
-        { author: entry.author.login, message: entry.commit.message, repository: @repository }
+        { author: entry.author.login, message: entry.commit.message, created_at: entry.commit.author.date, repository: @repository }
       end
     end
 

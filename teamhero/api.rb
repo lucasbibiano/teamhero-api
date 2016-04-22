@@ -52,7 +52,7 @@ module Teamhero
         optional :github_access_token, type: String, desc: "A access token capable of reading the desired repository (if private)"
         requires :repository, type: String, desc: "The full name (organization/repository-name) of the repository to read"
       end
-      post "/github" do
+      get "/github" do
         GithubWorker.perform_async(params[:repository], params[:github_access_token])
         { success: "ok...importing github history" }
       end

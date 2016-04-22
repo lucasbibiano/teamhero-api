@@ -4,6 +4,8 @@ module Models
                        include Mongoid::Document
                        include Mongoid::Attributes::Dynamic
 
+                       field :created_at, type: DateTime
+
                        store_in collection: klass
                      end)
   end
