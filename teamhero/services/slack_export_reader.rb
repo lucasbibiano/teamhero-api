@@ -39,7 +39,7 @@ module Services
         next nil if entry["subtype"]
         {
           user: id_to_user(entry["user"]),
-          date: date,
+          created_at: date,
           channel: channel,
           text: entry["text"],
           mentions: extract_mentions(entry["text"]),

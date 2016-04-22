@@ -11,11 +11,11 @@ module Services
 
     def process
       {
-        Issue: get_issues,
-        IssueComment: get_issues_comments,
-        PullRequest: get_pull_requests,
-        PullRequestComment: get_pull_requests_comments,
-        Commit: get_commits_on_master
+        issues: get_issues,
+        issue_comments: get_issues_comments,
+        pull_requests: get_pull_requests,
+        pull_request_comments: get_pull_requests_comments,
+        commits: get_commits_on_master
       }
     end
 

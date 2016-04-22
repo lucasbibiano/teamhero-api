@@ -4,9 +4,13 @@ module Teamhero
 
     helpers do
       def get_model(str)
-        Object.const_get("Models::#{str}")
+        "models/#{str}".camelize.constantize
       rescue NameError
         error! "Not found", 404
+      end
+
+      def logger
+        API.logger
       end
     end
 
@@ -16,7 +20,11 @@ module Teamhero
         optional :author, desc: "The author of the event"
       end
       get ":type" do
-        get_model(params[:type]).all
+        since = params.delete(:since)
+        before = params.delete(:before)
+        type = params.delete(:type)
+
+        get_model(type).since(since).before(before).where(params).all
       end
 
     end
@@ -27,7 +35,11 @@ module Teamhero
         optional :author, desc: "The author of the event"
       end
       get ":type" do
-        get_model(params[:type]).count
+        since = params.delete(:since)
+        before = params.delete(:before)
+        type = params.delete(:type)
+
+        get_model(type).since(since).before(before).where(params).count
       end
 
     end
